@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 | 유선빈</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Wanderer</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#experience">경험</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Wanderer</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">소개</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">경험</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">프로젝트</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./img/SNOW_SNIPER.png" alt="프로필 사진" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">안녕하세요, 저는</p>
+        <h1 class="title"></h1>
+        <p class="section__text__p2">웹 개발자 지망생</p>
+
+        <div class="btn-container"></div>
+
+        <div id="socials-container">
+          <img
+            src="./img/github.png"
+            alt="Github 프로필"
+            class="icon"
+            onclick="window.open('https://github.com/Rickyphantom')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">더 알아보기</p>
+      <h1 class="title">소개</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./img/experience.png" alt="경험 아이콘" class="icon" />
+              <h1>자격증</h1>
+              <p>전자기기기능사</p>
+            </div>
+            <div class="details-container">
+              <img src="./img/education.png" alt="교육 아이콘" class="icon" />
+              <h1>경력</h1>
+              <p>정보보호병<br />중부대 재학중</p>
+            </div>
+            <div class="details-container">
+              <img src="./img/mbti.png" alt="MBTI 아이콘" class="icon" />
+              <h1>MBTI</h1>
+              <p>INTJ</p>
+            </div>
+          </div>
+          <div class="text-container"></div>
+        </div>
+      </div>
+      <img
+        src="./img/arrow.png"
+        alt="화살표 아이콘"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">내 경험 탐색</p>
+      <h1 class="title">경험</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">프론트엔드</h2>
+            <div class="article-container">
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>중급</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>중하급</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>JS</h3>
+                  <p>중하급</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>React</h3>
+                  <p>경험 없음</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Angular</h3>
+                  <p>경험 없음</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>하급</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">백엔드</h2>
+            <div class="article-container">
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>중하급</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Java</h3>
+                  <p>중하급</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>PHP</h3>
+                  <p>경험 없음</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Node</h3>
+                  <p>경험 없음</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./img/arrow.png"
+        alt="화살표 아이콘"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">프로젝트</p>
+      <h1 class="title">프로젝트</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container"></div>
+            <h2 class="experience-sub-title project-title">
+              24학년 중간고사 포트폴리오
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/Rickyphantom/projact-solo')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://projact-solo-qzc169mrb-phantoms-projects-8156b487.vercel.app/)"
+              >
+                vercel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
