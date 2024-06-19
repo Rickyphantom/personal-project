@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오 | 유선빈</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -21,7 +22,7 @@
     <nav id="hamburger-nav">
       <div class="logo">Wanderer</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon">
+        <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
@@ -40,7 +41,9 @@
       </div>
       <div class="section__text">
         <p class="section__text__p1">안녕하세요, 저는</p>
-        <h1 class="title">웹 개발자 지망생</h1>
+        <h1 class="title"></h1>
+        <p class="section__text__p2">웹 개발자 지망생</p>
+        <h1 class="title"></h1>
         <p class="section__text__p2">유선빈</p>
 
         <div class="btn-container"></div>
@@ -93,92 +96,234 @@
       <p class="section__text__p1">내 경험치</p>
       <h1 class="title">숙련도</h1>
       <div class="experience-details-container">
-        <div class="details-container">
-          <h2 class="experience-sub-title">프론트엔드</h2>
-          <div class="article-container">
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>HTML</h3>
-                <p>중급</p>
-              </div>
-            </article>
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">프론트엔드</h2>
+            <div class="article-container" id="frontend-skills">
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>중급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('HTML', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('HTML', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>CSS</h3>
-                <p>중하급</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>중하급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('CSS', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('CSS', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>JS</h3>
-                <p>중하급</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>JS</h3>
+                  <p>중하급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('JS', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('JS', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>React</h3>
-                <p>경험 없음</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>React</h3>
+                  <p>경험 없음</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('React', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('React', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>Angular</h3>
-                <p>경험 없음</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Angular</h3>
+                  <p>경험 없음</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Angular', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Angular', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>Bootstrap</h3>
-                <p>하급</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>하급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Bootstrap', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Bootstrap', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">백엔드</h2>
-          <div class="article-container">
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>중하급</p>
-              </div>
-            </article>
+          <div class="details-container">
+            <h2 class="experience-sub-title">백엔드</h2>
+            <div class="article-container" id="backend-skills">
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>중하급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Python', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Python', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>중하급</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Java</h3>
+                  <p>중하급</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Java', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Java', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>PHP</h3>
-                <p>경험 없음</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>PHP</h3>
+                  <p>경험 없음</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('PHP', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('PHP', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
 
-            <article>
-              <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
-              <div>
-                <h3>Node</h3>
-                <p>경험 없음</p>
-              </div>
-            </article>
+              <article>
+                <img src="./img/checkmark.png" alt="경험 아이콘" class="icon" />
+                <div>
+                  <h3>Node</h3>
+                  <p>경험 없음</p>
+                  <div class="skill-control">
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Node', '-')"
+                    >
+                      -
+                    </button>
+                    <button
+                      class="btn-control"
+                      onclick="adjustSkill('Node', '+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -193,33 +338,59 @@
     <section id="projects">
       <p class="section__text__p1">프로젝트</p>
       <h1 class="title">프로젝트</h1>
-      <div id="project-list" class="experience-details-container">
-        <!-- 프로젝트 리스트가 여기에 추가됩니다. -->
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <h2 class="experience-sub-title project-title">
+                24학년 중간고사 개인 포트폴리오
+              </h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/Rickyphantom/projact-solo')"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="add-project-container">
-        <h2>프로젝트 추가</h2>
-        <form id="add-project-form">
-          <input
-            type="text"
-            id="project-title"
-            placeholder="프로젝트 제목"
-            required
-          />
-          <input
-            type="url"
-            id="project-github"
-            placeholder="Github 링크"
-            required
-          />
-          <input
-            type="text"
-            id="project-members"
-            placeholder="팀원 (쉼표로 구분)"
-          />
-          <button type="submit" class="btn btn-color-2">추가</button>
-        </form>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <h2 class="experience-sub-title project-title">
+                24학년 기말고사 팀플 프로젝트
+              </h2>
+              <div class="btn-container">
+                <h1>
+                  조원 : <a href="https://github.com/kindwitch">박이슬</a>,
+                  <a href="https://github.com/limgunny">임건희</a>, 유선빈
+                </h1>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/limgunny/final_personal_project-')"
+                >
+                  Github
+                </button>
+                <div class="btn-container">
+                  <button class="btn btn-color-2" onclick="addProject()">
+                    프로젝트 추가
+                  </button>
+                  <button class="btn btn-color-3" onclick="removeProject()">
+                    프로젝트 삭제
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <script src="script.js"></script>
+
+    <script src="./scripts.js"></script>
   </body>
 </html>

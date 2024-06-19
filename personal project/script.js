@@ -54,3 +54,85 @@ document.addEventListener('DOMContentLoaded', function () {
 
   displayProjects();
 });
+// JavaScript 코드
+
+// 기술의 경험 수준을 저장할 객체
+const skills = {
+  HTML: 2, // 0: 경험 없음, 1: 최하급, 2: 하급, 3: 중하급, 4: 중급, 5: 중상급, 6: 상급, 7: 최상급, 8: 전문가
+  CSS: 3,
+  JS: 3,
+  React: 0,
+  Angular: 0,
+  Bootstrap: 1,
+  Python: 3,
+  Java: 3,
+  PHP: 0,
+  Node: 0,
+};
+
+// 기술의 경험 수준을 조절하는 함수
+function adjustSkill(skill, direction) {
+  if (direction === '-') {
+    skills[skill] = Math.max(skills[skill] - 1, 0);
+  } else if (direction === '+') {
+    skills[skill] = Math.min(skills[skill] + 1, 8);
+  }
+  updateSkills();
+}
+
+// 기술의 경험 수준을 업데이트하는 함수
+function updateSkills() {
+  const frontendSkills = document.getElementById('frontend-skills');
+  const backendSkills = document.getElementById('backend-skills');
+
+  const frontendArticles = frontendSkills.getElementsByTagName('article');
+  const backendArticles = backendSkills.getElementsByTagName('article');
+
+  // 프론트엔드 기술 업데이트
+  Array.from(frontendArticles).forEach((article) => {
+    const skillName = article.getElementsByTagName('h3')[0].textContent.trim();
+    const skillLevel = skills[skillName];
+    const skillParagraph = article.getElementsByTagName('p')[0];
+    skillParagraph.textContent = getSkillLevelText(skillLevel);
+  });
+
+  // 백엔드 기술 업데이트
+  Array.from(backendArticles).forEach((article) => {
+    const skillName = article.getElementsByTagName('h3')[0].textContent.trim();
+    const skillLevel = skills[skillName];
+    const skillParagraph = article.getElementsByTagName('p')[0];
+    skillParagraph.textContent = getSkillLevelText(skillLevel);
+  });
+}
+
+// 경험 수준에 따른 텍스트 반환 함수
+function getSkillLevelText(level) {
+  switch (level) {
+    case 0:
+      return '경험 없음';
+    case 1:
+      return '최하급';
+    case 2:
+      return '하급';
+    case 3:
+      return '중하급';
+    case 4:
+      return '중급';
+    case 5:
+      return '중상급';
+    case 6:
+      return '상급';
+    case 7:
+      return '최상급';
+    case 8:
+      return '전문가';
+    default:
+      return '';
+  }
+}
+
+// 메뉴 토글 함수
+function toggleMenu() {
+  const menu = document.querySelector('.menu-links');
+  menu.classList.toggle('show-menu');
+}
